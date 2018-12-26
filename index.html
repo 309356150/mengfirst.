@@ -142,7 +142,7 @@
 				position: absolute;
 				left: 0px;
 				top: 0px;
-				background-color:#fff2e5;
+				background-color:#ffffff;
 				border-width: 5px
 				border-color: #ffffff;
 				border: 0;<!--设置对象边框-->
@@ -252,9 +252,27 @@
 			}
 			progress
 			{
-				width: 120px;
+				width: 123px;
+				color: #1E90FF;
+				border: #E6E6E6;
+				background: #FF0000;
 			}
-		
+			progress::-webkit-progress-bar
+			{
+				background: #FF0000;
+			}
+			progress::-webkit-progress-value,
+			progress::--moz-progress-bar
+			{
+				background: #1E90FF;
+			}
+			img
+			{
+				width: 100%;
+				height: 63%;
+				
+			}
+
  
         </style>
 	</head>
@@ -269,12 +287,15 @@
 		
 		<fieldset class="the">
 			<legend></legend>
-				
+				<img src="logo1.png" ></img>
 		</fieldset><!--边框装饰条-->
 		
 		<fieldset class="four">
 			<legend></legend>
-			  <progress value="35" max="35"></progress>
+			    <progress max="15" value="0" id="dn"></progress>
+			    <progress max="35" value="0" id="pg"></progress>
+			    <progress max="3" value="0" id="ls"></progress>
+			    <progress max="34" value="0" id="ms"></progress>
 		</fieldset><!--边框装饰条-->
 		
 			
@@ -1236,6 +1257,12 @@
 				var e12=document.getElementById("e12");
 				var e13=document.getElementById("e13");
 				
+				var dn=document.getElementById('dn');
+				var pg=document.getElementById('pg');
+				var ls=document.getElementById('ls');
+				var ms=document.getElementById('ms');
+				
+				
 				
 	
 				
@@ -1335,6 +1362,12 @@
 		        e11.value=(parseFloat(cc24.value)-(parseFloat(e10.value)/parseFloat(cc25.value))).toFixed(1)
 		        e12.value=(parseFloat(cc24.value)*parseFloat(cc25.value)-parseFloat(e10.value)).toFixed(1)
 		        e13.value=(parseFloat(d13.value)*parseFloat(e12.value)/10000).toFixed(1)
+				
+				dn.value=parseFloat(c11.value)
+				pg.value=parseFloat(c12.value)
+				ls.value=parseFloat(c9.value)
+				ms.value=parseFloat(c36.value)
+				
 			}
 		</script>
 
