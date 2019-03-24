@@ -23,14 +23,14 @@ html,body{
     background-color: antiquewhite;
 }
 .center{
-    width: 100%;
+    width: 100px;
     height: 200px;
     margin-left: 10px;
     margin-right: 10px;
     background-color: black;
 }
 .botm{
-    width: 100%;
+    width: 100px;
     height: 20px;
     background-color: blue;
     position: fixed;
